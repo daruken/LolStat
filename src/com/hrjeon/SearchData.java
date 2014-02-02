@@ -1,9 +1,10 @@
 package com.hrjeon;
 
-import java.io.IOException;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.StringTokenizer;
 
 /**
  * Created by daruken on 2014. 2. 1..
@@ -50,4 +51,27 @@ public class SearchData {
         BufferedReader input = new BufferedReader(new InputStreamReader(url.openStream()));
         return input.readLine();
     }
+
+    /**
+     *
+     * @param id
+     * @return Champion name
+     * @throws IOException
+     */
+    public String getChampionName(String id) throws IOException{
+        String championUrl = "https://prod.api.pvp.net/api/lol/static-data/na/v1/champion/"+id+"?api_key=b360652d-5ee4-4a7a-bacf-f9aa88e92943";
+        URL url = new URL(championUrl);
+
+        BufferedReader input = new BufferedReader(new InputStreamReader(url.openStream()));
+        StringTokenizer championSt = new StringTokenizer(input.readLine(), ":,");
+        String championArray[] = new String[championSt.countTokens()];
+        int i=0;
+        while(championSt.hasMoreTokens()){
+            championArray[i] = championSt.nextToken();
+            i++;
+        }
+
+        return championArray[5].replaceAll("\"", "");
+    }
+
 }

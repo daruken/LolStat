@@ -16,6 +16,8 @@ public class ShowData {
      * @brief Show recent game list
      */
     public void showRecentGame(PrintWriter out, String[] gameArray) throws IOException{
+        SearchData searchLol = new SearchData();
+
         for(int i=0;i<gameArray.length;i++){
             if(gameArray[i].equals("\"gameMode\""))
                 out.println(gameArray[i].replaceAll("\"", "")+":"+gameArray[i+1].replaceAll("\"", "")+"<br>");
@@ -25,7 +27,7 @@ public class ShowData {
 
             if(gameArray[i].equals("\"championId\"")){
                 String str = new String(gameArray[i+1].replaceAll("}", ""));
-                out.println(gameArray[i].replaceAll("\"", "")+":"+str.replaceAll("]", "")+"<br>");
+                out.println(gameArray[i].replaceAll("\"", "")+":"+searchLol.getChampionName(str.replaceAll("]", ""))+"<br>");
             }
 
             if(gameArray[i].equals("\"spell1\""))

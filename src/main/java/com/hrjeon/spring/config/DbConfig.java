@@ -9,6 +9,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 
 import javax.sql.DataSource;
@@ -29,5 +30,14 @@ public class DbConfig {
     sessionFactoryBean.setPackagesToScan("com.hrjeon");
 
     return sessionFactoryBean;
+  }
+
+  @Bean(name = "transactionManager")
+  public HibernateTransactionManager transactionManager() throws Exception {
+    HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+    transactionManager.setDataSource(dataSource());
+    transactionManager.setSessionFactory(sessionFactory().getObject());
+
+    return transactionManager;
   }
 }

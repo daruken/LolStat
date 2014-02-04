@@ -1,0 +1,4 @@
+var lolstat = {
+  model: {},
+  view: {}
+}

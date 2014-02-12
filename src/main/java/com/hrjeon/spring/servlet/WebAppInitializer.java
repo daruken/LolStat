@@ -24,7 +24,7 @@ public class WebAppInitializer extends AbstractDispatcherServletInitializer {
 
   @Override
   protected String[] getServletMappings() {
-    return new String[0];
+    return new String[]{"/"};
   }
 
   @Override

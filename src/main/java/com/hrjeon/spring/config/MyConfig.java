@@ -8,7 +8,6 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 @PropertySource({"classpath:/lol.properties"})
-@ComponentScan(basePackages = "com.hrjeon")
 public class MyConfig {
   @Autowired
   Environment env;

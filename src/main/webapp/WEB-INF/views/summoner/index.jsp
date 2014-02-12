@@ -4,6 +4,11 @@
 <tiles:insertTemplate template="/WEB-INF/layout/html.jsp">
   <tiles:putAttribute name="body">
     <article class="container">
+      <p>
+        icon: <img src="/resources/img/summoner-icon/${summoner.profileIconId}.jpg" /> <br>
+        id: <small>${summoner.id}</small> <br>
+        name: <small>${summoner.name}</small>
+      </p>
     </article>
   </tiles:putAttribute>
 </tiles:insertTemplate>

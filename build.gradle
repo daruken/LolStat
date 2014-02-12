@@ -17,7 +17,9 @@ dependencies {
     def version_hibernate = '4.3.1.Final'
 
     compile group: 'org.springframework', name: 'spring-webmvc', version: version_spring
+    compile group: 'org.springframework', name: 'spring-websocket', version: version_spring
     compile group: 'org.springframework', name: 'spring-orm', version: version_spring
+    compile group: 'org.springframework', name: 'spring-messaging', version: version_spring
     testCompile group: 'org.springframework', name: 'spring-test', version: version_spring
 
     compile group: 'org.hibernate', name: 'hibernate-core', version: version_hibernate
@@ -33,6 +35,7 @@ dependencies {
 
     testCompile 'junit:junit:4.11'
     compile 'commons-io:commons-io:2.4'
+    compile 'org.apache.commons:commons-lang3:3.2.1'
     compile 'org.apache.tiles:tiles-extras:3.0.3'
     compile 'commons-dbcp:commons-dbcp:1.4'
     compile 'mysql:mysql-connector-java:5.1.28'
@@ -42,7 +45,7 @@ dependencies {
     compile 'javax.servlet:javax.servlet-api:3.1.0'
     compile 'javax.el:javax.el-api:3.0.0'
 
-    testCompile group: 'org.eclipse.jetty', name: 'jetty-webapp', version: version_jetty
-    testCompile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: version_jetty
-    testCompile group: 'org.eclipse.jetty', name: 'jetty-jsp', version: version_jetty
+    compile group: 'org.eclipse.jetty', name: 'jetty-webapp', version: version_jetty
+    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: version_jetty
+    compile group: 'org.eclipse.jetty', name: 'jetty-jsp', version: version_jetty
 }

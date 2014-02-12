@@ -20,8 +20,8 @@ public class SummonerService {
   @Autowired
   private Lol lol;
 
-  public Summoner searchByName(String name) throws IOException, LolException {
-    return (Summoner)ObjectUtils.defaultIfNull(dao.getIdByName(name), createFromName(name));
+  public Summoner findByName(String name) throws IOException, LolException {
+    return (Summoner)ObjectUtils.defaultIfNull(dao.findByName(name), createFromName(name));
   }
 
   public Summoner createFromName(String name) throws IOException, LolException {
@@ -36,6 +36,6 @@ public class SummonerService {
   }
 
   public Summoner get(Long id) {
-    return dao.findById(id);
+    return dao.get(id);
   }
 }

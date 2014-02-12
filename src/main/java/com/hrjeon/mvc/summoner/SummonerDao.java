@@ -16,7 +16,7 @@ public class SummonerDao {
   @Autowired
   private SessionFactory sessionFactory;
 
-  public Summoner findById(Long id) {
+  public Summoner get(Long id) {
     return (Summoner)sessionFactory.getCurrentSession().get(Summoner.class, id);
   }
 
@@ -25,7 +25,7 @@ public class SummonerDao {
   }
 
 
-  public Object getIdByName(String name) {
+  public Object findByName(String name) {
     return (Summoner)sessionFactory.getCurrentSession()
         .createCriteria(Summoner.class)
         .add(Restrictions.eq("name", name))

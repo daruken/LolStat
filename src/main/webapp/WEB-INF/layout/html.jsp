@@ -15,9 +15,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title><tiles:insertAttribute name="title" defaultValue="Lol Stat" /></title>
-  <jsp:include page="/WEB-INF/include/common.jsp" />
+  <jsp:include page="/WEB-INF/include/styles.jsp" />
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
 </head>
 <body data-spy="scroll" data-twttr-rendered="true">
+  <jsp:include page="/WEB-INF/include/head.jsp" />
   <tiles:insertAttribute name="body" />
+  <jsp:include page="/WEB-INF/include/scripts.jsp" />
 </body>
 </html>

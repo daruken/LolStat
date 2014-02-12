@@ -19,6 +19,26 @@ public class Summoner implements Serializable {
   private Long revisionDate;
   private Long summonerLevel;
 
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setProfileIconId(Integer profileIconId) {
+    this.profileIconId = profileIconId;
+  }
+
+  public void setRevisionDate(Long revisionDate) {
+    this.revisionDate = revisionDate;
+  }
+
+  public void setSummonerLevel(Long summonerLevel) {
+    this.summonerLevel = summonerLevel;
+  }
+
   public Long getId() {
     return id;
   }

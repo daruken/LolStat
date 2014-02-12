@@ -17,8 +17,8 @@ public class SummonerController {
   @Autowired
   private SummonerService summonerService;
 
-  @RequestMapping("/{name}")
-  public ModelAndView page(@PathVariable String name) throws IOException, LolException {
+  @RequestMapping(value = "/{name}", method = RequestMethod.GET)
+  public ModelAndView get(@PathVariable String name) throws IOException, LolException {
     return new ModelAndView("/summoner/index")
         .addObject("summoner", summonerService.findByName(name));
   }

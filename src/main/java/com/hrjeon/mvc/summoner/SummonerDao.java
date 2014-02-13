@@ -1,8 +1,7 @@
 package com.hrjeon.mvc.summoner;
 
-import com.hrjeon.db.Summoner;
+import com.hrjeon.core.db.Summoner;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Projection;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;

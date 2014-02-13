@@ -1,6 +1,4 @@
-package com.hrjeon.db;
-
-import javax.persistence.Entity;
+package com.hrjeon.core.db;
 
 /**
  * Created by dennis on 14. 2. 4.

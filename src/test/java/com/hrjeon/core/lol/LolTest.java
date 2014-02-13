@@ -1,6 +1,7 @@
-package com.hrjeon.lol;
+package com.hrjeon.core.lol;
 
-import com.hrjeon.db.Summoner;
+import com.hrjeon.core.Lol;
+import com.hrjeon.core.db.Summoner;
 import com.hrjeon.test.support.AbstractSpringTestContext;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.hrjeon.lol;
+package com.hrjeon.core;
 
 /**
  * Created by dennis on 14. 2. 4.

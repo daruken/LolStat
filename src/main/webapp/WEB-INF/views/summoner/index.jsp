@@ -5,7 +5,7 @@
   <tiles:putAttribute name="body">
     <article class="container">
       <p>
-        icon: <img src="/resources/img/summoner-icon/${summoner.profileIconId}.jpg" /> <br>
+        icon: <img src="${realm.cdn}/${realm.v}/img/profileicon/${summoner.profileIconId}.png" /> <br>
         id: <small>${summoner.id}</small> <br>
         name: <small>${summoner.name}</small>
       </p>

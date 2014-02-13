@@ -10,17 +10,21 @@
 <nav class='nav navbar-fixed-top navbar-default' role='navigation'>
   <div class="container">
     <div class='navbar-header'>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <a class='navbar-brand' href='#'>Quasar</a>
     </div>
-    <ul class='nav navbar-nav'>
-      <li>
-        <form class="navbar-form navbar-left" role="form" action="/">
-          <div class="form-group">
-            <input name="name" type="search" class="form-control" placeholder="Summoner Name">
-          </div>
-          <button type="submit" class="btn btn-success">Search</button>
-        </form>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+      <form class="navbar-form" role="search" action="/">
+        <div class="form-group">
+          <input name="name" type="search" class="form-control" placeholder="Summoner Name">
+        </div>
+        <button type="submit" class="btn btn-success">Search</button>
+      </form>
+    </div>
   </div>
 </nav>
